@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Encryption/Decryption</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Text Encryption/Decryption</h1>
+    <form action="/encrypt" method="post">
+        <textarea name="text" placeholder="Enter text to encrypt"></textarea>
+        <button type="submit">Encrypt</button>
+    </form>
+    <% if (encryptedText) { %>
+        <p>Encrypted Text: <%= encryptedText %></p>
+    <% } %>
+    <form action="/decrypt" method="post">
+        <textarea name="text" placeholder="Enter text to decrypt"></textarea>
+        <button type="submit">Decrypt</button>
+    </form>
+    <% if (decryptedText) { %>
+        <p>Decrypted Text: <%= decryptedText %></p>
+    <% } %>
+</body>
+</html>
